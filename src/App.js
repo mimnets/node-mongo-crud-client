@@ -5,7 +5,8 @@ import Home from './components/Home';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home>
+    element: <Home></Home>,
+    loader: ()=> fetch('http://localhost:5000/users')
   },
   {
     path: '/users/add',
